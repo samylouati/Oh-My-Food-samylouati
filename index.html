@@ -4,6 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Oh My Food</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5011038c84.js" crossorigin="anonymous"></script>        
     </head>
     <body>
 
@@ -13,39 +18,42 @@
             <h1><img src="assets/Images/logo/ohmyfood.png" alt="ohmyfood"></h1>
         </header>
 
-        <!--Section Search-->
+        <!--Div Location-->
 
-        <section>
-            <form action="get"></form>
-            <input type="text">
-            <div>
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-                <button>Explorer nos restaurants</button>
-            </div>
+        <div class="location">
+            <form>
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" name="location" placeholder="Paris, Belleville">
+            </form>
+        </div>
+
+        <!--Section Réservations-->
+
+        <section class="reservation">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+            <button>Explorer nos restaurants</button>
         </section>
 
         <!--Section Fonctionnement-->
 
-        <section>
+        <section class="fonctionnement">
             <h2>Fonctionnement</h2>
-            <div>
-                <div>
-                    <i></i>
-                    <i></i>
-                    <a href=""></a>
+                <div class="rules">
+                    <h3>1</h3>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>Choisissez un restaurant</p>
                 </div>
-                <div>
-                    <i></i>
-                    <i></i>
-                    <a href=""></a>
+                <div class="rules">
+                    <h3>2</h3>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>Composez votre</p>
                 </div>
-                <div>
-                    <i></i>
-                    <i></i>
-                    <a href=""></a>
+                <div class="rules">
+                    <h3>3</h3>
+                    <i class="fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
                 </div>
-            </div>
         </section>
 
         <!--Section Restaurants-->
@@ -98,7 +106,7 @@
 
         <footer>
             <img src="assets/Images/logo/ohmyfood@2x.svg" alt="ohmyfood">
-            <section>
+            <div>
                 <div>
                     <i></i>
                     <a href="">Proposer un restaurant</a>
@@ -113,7 +121,7 @@
                 <div>
                     <a href="">Contact</a>
                 </div>
-            </section>
+            </div>
         </footer>
 
     
