@@ -1,0 +1,18 @@
+.fonctionnement { 
+    padding-top: 50px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .rules {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 90%;
+        height: 72px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        background-color: #f6f6f6;
+    }
+}
