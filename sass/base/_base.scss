@@ -1,10 +1,16 @@
 body {
     font-family: 'Roboto', sans-serif;
+    width: 375px;
 
     h2 {
         font-size: 24px;
         font-weight: 700;
+
     }
 
-    
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        color: #353535;
+    }
 }

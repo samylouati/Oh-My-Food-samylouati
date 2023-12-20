@@ -2,14 +2,14 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    box-shadow: inset 0px 5px 10px black; /*ombre interne à voir plus tard*/
+    background: var(--Grey-2, #EAEAEA);
 
-    .location input {
+    input {
         border: none;
+        height: 50px;
         background: var(--Grey-2, #EAEAEA);
 
-        .location input::placeholder {
+        input::placeholder {
             font-size: 16px;
             color: black;
             font-weight: 500;

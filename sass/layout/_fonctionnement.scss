@@ -3,6 +3,7 @@
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 
     .rules {
         margin: 20px;
@@ -14,5 +15,14 @@
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         background-color: #f6f6f6;
+        cursor: pointer;
+
+        i {
+            color: #7e7e7e;
+        }
+
+        i:hover {
+            color: #9356dc;
+        }
     }
 }
