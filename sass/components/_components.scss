@@ -13,9 +13,10 @@ h3 {
     margin-left: -15px;
 }
 
-.reservation {
+
 
     button {
+        margin: 15px;
         padding: 15px;
         height: 50px;
         border: #9356DC;
@@ -31,4 +32,3 @@ h3 {
     button:hover{
         background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
     }
-}
