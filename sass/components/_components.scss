@@ -1,3 +1,21 @@
+button {
+    margin: 15px;
+    padding: 15px;
+    height: 50px;
+    border: #9356DC;
+    border-radius: 25px ;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
 h3 {
     font-size: 15px;
     font-weight: 500;
@@ -12,23 +30,3 @@ h3 {
     text-align: center;
     margin-left: -15px;
 }
-
-
-
-    button {
-        margin: 15px;
-        padding: 15px;
-        height: 50px;
-        border: #9356DC;
-        border-radius: 25px ;
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-    }
-
-    button:hover{
-        background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-    }
