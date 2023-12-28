@@ -1,66 +1,67 @@
 .restaurants {
-    padding-top: 50px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     background-color: #f6f6f6;
 
     .listrestaurants {
-        gap: 20px;
-    }
+        display: flex;
+        flex-direction: column;
 
-    a {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-rows: 75% repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        width: 100%;
-        height: 250px;
-        border-radius: 15px;
-        background-color: white;
-        text-decoration: none;
+        a {
+            display: grid;
+            margin-bottom: 20px;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 75% 25%;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-color: white;
+            border-radius: 15px;
+            text-decoration: none;
+                
+                
+                img { grid-area: 1 / 1 / 2 / 3; }
+                .descriptioncard { grid-area: 2 / 1 / 3 / 2; }
+                i { grid-area: 2 / 2 / 3 / 3; }
+                p { grid-area: 1 / 2 / 2 / 3; }
 
-            .menus {
+            img {
+                height: 230px;
+                width: 100%;
+                border-radius: 15px 15px 0px 0px;
+            }
 
-                img { grid-area: 1 / 1 / 2 / 3;}                    
-                h4 { grid-area: 2 / 1 / 3 / 2; }
-                p { grid-area: 3 / 1 / 4 / 2; }
-                i { grid-area: 2 / 2 / 4 / 3; }
-            
-                img {
-                    height: 80%;
-                    width: 125%;
-                    object-fit: cover;
-                    border-radius: 15px 15px 0px 0px; }
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                color: #008766;
+                background-color: #99E2D0;
+                height: 25px;
+                width: 100%;
+                padding: 8px;
+            }
+                
+            .descriptioncard {
+                padding-left: 13px;
+                color: black;
 
-                h4 {
+                p {
+                    display: flex;
+                    font-size: 17px;
+                    font-weight: 300;
+                    background-color: white;
                     color: black;
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-
-
-                .descriptioncard {
-                    display: grid;
-                    grid-template-columns: 80% 20%;
-                    grid-template-rows: repeat(2, 1fr);
-                    grid-column-gap: 0px;
-                    grid-row-gap: 0px;
-                    padding-left: 10px;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-
-                    }
-                        
-                    h4 { grid-area: 1 / 1 / 2 / 2; }
-                    p { grid-area: 2 / 1 / 3 / 2; }
-                    i { grid-area: 2 / 2 / 3 / 3; }
-                        
-                }
-
                 }
             }
 
-
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

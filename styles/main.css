@@ -12,7 +12,8 @@ header img {
 
 body {
   font-family: "Roboto", sans-serif;
-  width: 375px;
+  max-width: 375px;
+  margin: 0px;
 }
 body h2 {
   font-size: 24px;
@@ -28,6 +29,7 @@ button {
   margin: 15px;
   padding: 15px;
   height: 50px;
+  width: 75%;
   border: #9356DC;
   border-radius: 25px;
   color: white;
@@ -39,7 +41,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 h3 {
@@ -86,6 +88,7 @@ form input input::placeholder {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   background-color: #f6f6f6;
 }
 .reservation .reservation p {
@@ -113,78 +116,75 @@ form input input::placeholder {
   background-color: #f6f6f6;
   cursor: pointer;
 }
-.fonctionnement .rules i {
-  color: #7e7e7e;
-}
-.fonctionnement .rules i:hover {
+.fonctionnement .rules:hover i {
   color: #9356dc;
 }
 
 .restaurants {
-  padding-top: 50px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
   background-color: #f6f6f6;
 }
 .restaurants .listrestaurants {
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.restaurants a {
+.restaurants .listrestaurants a {
   display: grid;
+  margin-bottom: 20px;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 75% repeat(2, 1fr);
+  grid-template-rows: 75% 25%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 100%;
-  height: 250px;
-  border-radius: 15px;
   background-color: white;
+  border-radius: 15px;
   text-decoration: none;
 }
-.restaurants a .menus img {
+.restaurants .listrestaurants a img {
   grid-area: 1/1/2/3;
 }
-.restaurants a .menus h4 {
+.restaurants .listrestaurants a .descriptioncard {
   grid-area: 2/1/3/2;
 }
-.restaurants a .menus p {
-  grid-area: 3/1/4/2;
+.restaurants .listrestaurants a i {
+  grid-area: 2/2/3/3;
 }
-.restaurants a .menus i {
-  grid-area: 2/2/4/3;
+.restaurants .listrestaurants a p {
+  grid-area: 1/2/2/3;
 }
-.restaurants a .menus img {
-  height: 80%;
-  width: 125%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.restaurants .listrestaurants a img {
+  height: 230px;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants a .menus h4 {
-  color: black;
-  font-size: 18px;
-  font-weight: 700;
-}
-.restaurants a .menus .descriptioncard {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  padding-left: 10px;
+.restaurants .listrestaurants a p {
+  display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  background-color: #99E2D0;
+  height: 25px;
+  width: 100%;
+  padding: 8px;
 }
-.restaurants a .menus h4 {
-  grid-area: 1/1/2/2;
+.restaurants .listrestaurants a .descriptioncard {
+  padding-left: 13px;
+  color: black;
 }
-.restaurants a .menus p {
-  grid-area: 2/1/3/2;
+.restaurants .listrestaurants a .descriptioncard p {
+  display: flex;
+  font-size: 17px;
+  font-weight: 300;
+  background-color: white;
+  color: black;
 }
-.restaurants a .menus i {
-  grid-area: 2/2/3/3;
+.restaurants .listrestaurants a i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -210,15 +210,21 @@ footer a {
   text-decoration: none;
 }
 
-img {
+.images {
+  z-index: 1;
+}
+.images img {
   width: 100%;
 }
 
 .lerestaurant {
+  position: absolute;
+  top: 30%;
+  z-index: 2;
   width: 375px;
   height: auto;
+  border-radius: 25px 25px 0px 0px;
   background-color: #f6f6f6; /*faire un border radius par dessus l'image*/
-  margin-top: -100px;
 }
 .lerestaurant .title {
   display: flex;
@@ -230,6 +236,11 @@ img {
   font-size: 28px;
   font-weight: 400;
   border: none;
+}
+.lerestaurant .title .border {
+  height: 3px;
+  width: 50px;
+  color: #99e2d0;
 }
 .lerestaurant .title i {
   display: flex;
@@ -245,7 +256,6 @@ img {
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
-  border-bottom: 3px #99e2d0 solid;
 }
 .lerestaurant .carte {
   display: flex;

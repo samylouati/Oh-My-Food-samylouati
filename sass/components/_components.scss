@@ -2,6 +2,7 @@ button {
     margin: 15px;
     padding: 15px;
     height: 50px;
+    width: 75%;
     border: #9356DC;
     border-radius: 25px ;
     color: white;
@@ -13,7 +14,8 @@ button {
 }
 
 button:hover{
-    background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+
 }
 
 h3 {

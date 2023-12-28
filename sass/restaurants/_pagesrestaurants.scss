@@ -1,12 +1,19 @@
-img {
+.images {
+    z-index: 1;
+    
+    img {
     width: 100%
+    }
 }
 
 .lerestaurant {
+    position: absolute;
+    top: 30%;
+    z-index: 2;
     width: 375px;
     height: auto;
+    border-radius: 25px 25px 0px 0px;
     background-color:#f6f6f6;      /*faire un border radius par dessus l'image*/
-    margin-top: -100px;
         .title {
             display: flex;
             align-items: center;
@@ -17,6 +24,13 @@ img {
                 font-weight: 400;
                 border: none;
             }
+
+            .border {
+                height: 3px;
+                width: 50px;
+                color: #99e2d0;
+            }
+
             i {
                 display: flex;
                 justify-content: center;
@@ -33,7 +47,6 @@ img {
             font-weight: 300;
             line-height: normal;
             text-transform: uppercase;
-            border-bottom: 3px #99e2d0 solid ;
         }
 
         .carte {
