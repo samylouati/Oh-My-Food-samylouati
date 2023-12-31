@@ -1,62 +1,65 @@
 .images {
     position: relative;
     z-index: 1;
-    height: 320px;
+    height: 275px;
+    object-fit: cover;
     
     img {
-    width: 150%
+    width: 110%
     }
 }
 
 .lerestaurant {
     position: relative;
-    top: 30%;
     z-index: 2;
     height: auto;
     border-radius: 25px 25px 0px 0px;
-    background-color:#f6f6f6;      /*faire un border radius par dessus l'image*/
-        .title {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            h2 {
-                font-family: 'Shrikhand', serif;
-                font-size: 28px;
-                font-weight: 400;
-                border: none;
-            }
+    background-color:#f6f6f6;
+    padding: 30px 13px 30px 13px;
 
-
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        .border {
-            height: 5px;
-            width: 50px;
-            color: #99e2d0;
-        }
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
         h2 {
-            padding-top: 40px;
-            color: #000;
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            text-transform: uppercase;
+            font-family: 'Shrikhand', serif;
+            font-size: 28px;
+            font-weight: 400;
+            border: none;
         }
 
-        .carte {
+
+        i {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 15px;          
         }
+    }
+
+    h2 {
+        color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+        padding-left: 13px;
+    }
+
+    .border {
+        height: 3px;
+        width: 50px;
+        color: #99e2d0;
+    }
+
+    .carte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;        
+    
         .card { 
             width: 90%;
             height: 70px;
@@ -70,6 +73,7 @@
             grid-template-rows: repeat(2, 50%);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
+            cursor: pointer; 
             }
                 
                 h4 { grid-area: 1 / 1 / 2 / 2; }
@@ -77,6 +81,7 @@
                 span { grid-area: 2 / 2 / 3 / 3; }
 
                 h4 {
+                    margin: 0px;
                     font-size: 18px;
                     font-weight: 500;
                 }
@@ -86,4 +91,5 @@
                     font-weight: 300;
                 }
                 
-        }
+    }
+}
