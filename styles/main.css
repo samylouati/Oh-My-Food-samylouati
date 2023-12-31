@@ -5,6 +5,7 @@ header {
   height: 45px;
   padding: 14px;
   gap: 40px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 header img {
   height: 35px;
@@ -12,7 +13,6 @@ header img {
 
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 375px;
   margin: 0px;
 }
 body h2 {
@@ -30,6 +30,7 @@ button {
   padding: 15px;
   height: 50px;
   width: 75%;
+  max-width: 300px;
   border: #9356DC;
   border-radius: 25px;
   color: white;
@@ -67,7 +68,6 @@ form {
   height: 50px;
   gap: 15px;
   background: var(--Grey-2, #EAEAEA);
-  box-shadow: inset 0px 5px 10px;
 }
 form input {
   border: none;
@@ -131,6 +131,7 @@ form input input::placeholder {
   flex-direction: column;
 }
 .restaurants .listrestaurants a {
+  height: 250px;
   display: grid;
   margin-bottom: 20px;
   grid-template-columns: 80% 20%;
@@ -154,7 +155,7 @@ form input input::placeholder {
   grid-area: 1/2/2/3;
 }
 .restaurants .listrestaurants a img {
-  height: 230px;
+  height: 100%;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
@@ -167,7 +168,7 @@ form input input::placeholder {
   color: #008766;
   background-color: #99E2D0;
   height: 25px;
-  width: 100%;
+  width: 100px;
   padding: 8px;
 }
 .restaurants .listrestaurants a .descriptioncard {
@@ -211,17 +212,18 @@ footer a {
 }
 
 .images {
+  position: relative;
   z-index: 1;
+  height: 320px;
 }
 .images img {
-  width: 100%;
+  width: 150%;
 }
 
 .lerestaurant {
-  position: absolute;
+  position: relative;
   top: 30%;
   z-index: 2;
-  width: 375px;
   height: auto;
   border-radius: 25px 25px 0px 0px;
   background-color: #f6f6f6; /*faire un border radius par dessus l'image*/
@@ -237,15 +239,15 @@ footer a {
   font-weight: 400;
   border: none;
 }
-.lerestaurant .title .border {
-  height: 3px;
-  width: 50px;
-  color: #99e2d0;
-}
 .lerestaurant .title i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.lerestaurant .border {
+  height: 5px;
+  width: 50px;
+  color: #99e2d0;
 }
 .lerestaurant h2 {
   padding-top: 40px;
