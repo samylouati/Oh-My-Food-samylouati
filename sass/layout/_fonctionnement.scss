@@ -1,11 +1,22 @@
 .fonctionnement { 
-    padding-top: 50px;
-    padding-left: 20px;
+
+    padding: 50px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
 
+    .items {
+        @media (min-width: 700px) {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            }
+    }
+    
     .rules {
+        @media (min-width: 700px) {
+            width: 30%;
+            }
         margin: 20px;
         display: flex;
         align-items: center;
@@ -16,7 +27,6 @@
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         background-color: #f6f6f6;
         cursor: pointer;
-
     }
     
     .rules:hover {

@@ -84,10 +84,10 @@ h3 {
 form {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
-  height: 50px;
   gap: 15px;
+  height: 50px;
   background: var(--Grey-2, #EAEAEA);
 }
 form input {
@@ -119,11 +119,17 @@ form input input::placeholder {
 }
 
 .fonctionnement {
-  padding-top: 50px;
-  padding-left: 20px;
+  padding: 50px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+}
+@media (min-width: 700px) {
+  .fonctionnement .items {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+  }
 }
 .fonctionnement .rules {
   margin: 20px;
@@ -136,6 +142,11 @@ form input input::placeholder {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   background-color: #f6f6f6;
   cursor: pointer;
+}
+@media (min-width: 700px) {
+  .fonctionnement .rules {
+    width: 30%;
+  }
 }
 .fonctionnement .rules:hover i {
   color: #9356dc;
@@ -151,6 +162,13 @@ form input input::placeholder {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 700px) {
+  .restaurants .listrestaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .restaurants .listrestaurants a {
   height: 250px;
   display: grid;
@@ -163,6 +181,11 @@ form input input::placeholder {
   border-radius: 15px;
   text-decoration: none;
   padding-bottom: 30px;
+}
+@media (min-width: 700px) {
+  .restaurants .listrestaurants a {
+    max-width: 40%;
+  }
 }
 .restaurants .listrestaurants a img {
   grid-area: 1/1/2/3;
@@ -207,7 +230,7 @@ form input input::placeholder {
   display: flex;
   font-size: 17px;
   font-weight: 300;
-  background-color: white;
+  background-color: transparent;
   color: black;
   justify-content: flex-start;
 }
@@ -227,6 +250,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+}
+@media (min-width: 700px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
 }
 footer h2 {
   font-family: "Shrikhand", serif;
@@ -248,36 +278,40 @@ footer a {
   position: relative;
   z-index: 1;
   height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 350px;
 }
 .images img {
   width: 110%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .lerestaurant {
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 2;
-  height: auto;
   border-radius: 25px 25px 0px 0px;
   background-color: #f6f6f6;
   padding: 30px 13px 30px 13px;
+}
+@media (min-width: 700px) {
+  .lerestaurant {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 .lerestaurant .title {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 }
 .lerestaurant .title h2 {
   font-family: "Shrikhand", serif;
   font-size: 28px;
   font-weight: 400;
-  border: none;
-}
-.lerestaurant .title i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .lerestaurant h2 {
   color: #000;
@@ -291,8 +325,9 @@ footer a {
 }
 .lerestaurant .border {
   height: 3px;
-  width: 50px;
-  color: #99e2d0;
+  width: 40px;
+  background-color: #99e2d0;
+  margin: 0px 0px 13px 13px;
 }
 .lerestaurant .carte {
   display: flex;
