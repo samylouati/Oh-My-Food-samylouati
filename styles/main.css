@@ -31,7 +31,7 @@ button {
   margin: 15px;
   padding: 15px;
   width: 60%;
-  max-width: 300px;
+  max-width: 200px;
   border-radius: 25px;
   color: white;
   font-size: 16px;
@@ -51,7 +51,7 @@ button:hover {
   margin: 15px;
   padding: 15px;
   width: 60%;
-  max-width: 300px;
+  max-width: 200px;
   border-radius: 25px;
   color: white;
   font-size: 16px;
@@ -104,8 +104,7 @@ form input input::placeholder {
 }
 
 .reservation {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -119,10 +118,15 @@ form input input::placeholder {
 }
 
 .fonctionnement {
-  padding: 50px 20px 0px 20px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+}
+@media (min-width: 700px) {
+  .fonctionnement {
+    padding: 50px 10%;
+  }
 }
 @media (min-width: 700px) {
   .fonctionnement .items {
@@ -148,6 +152,11 @@ form input input::placeholder {
     width: 30%;
   }
 }
+.fonctionnement .rules p {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
 .fonctionnement .rules:hover i {
   color: #9356dc;
 }
@@ -155,93 +164,99 @@ form input input::placeholder {
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 50px 20px;
-  background-color: #f6f6f6;
+  padding: 20px;
+  background-color: #EAEAEA;
 }
-.restaurants .listrestaurants {
-  display: flex;
-  flex-direction: column;
+@media (min-width: 700px) {
+  .restaurants {
+    padding: 20px 10%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 @media (min-width: 700px) {
   .restaurants .listrestaurants {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
-.restaurants .listrestaurants a {
-  height: 250px;
-  display: grid;
+.restaurants .listrestaurants .cardrestaurants {
+  height: 270px;
+  background-color: white;
+  border-radius: 25px;
   margin-bottom: 20px;
-  grid-template-columns: 80% 20%;
+  display: grid;
+  grid-template-columns: 75% 25%;
   grid-template-rows: 75% 25%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-color: white;
-  border-radius: 15px;
-  text-decoration: none;
-  padding-bottom: 30px;
 }
 @media (min-width: 700px) {
-  .restaurants .listrestaurants a {
-    max-width: 40%;
+  .restaurants .listrestaurants .cardrestaurants {
+    width: 48%;
   }
 }
-.restaurants .listrestaurants a img {
-  grid-area: 1/1/2/3;
+.restaurants .listrestaurants a {
+  grid-area: 1/1/3/3;
 }
-.restaurants .listrestaurants a .descriptioncard {
-  grid-area: 2/1/3/2;
-}
-.restaurants .listrestaurants a i {
-  grid-area: 2/2/3/3;
-}
-.restaurants .listrestaurants a p {
+.restaurants .listrestaurants p {
   grid-area: 1/2/2/3;
 }
-.restaurants .listrestaurants a img {
-  height: 100%;
+.restaurants .listrestaurants i {
+  grid-area: 2/2/3/3;
+}
+.restaurants .listrestaurants a {
+  text-decoration: none;
+}
+.restaurants .listrestaurants img {
+  height: 200px;
   width: 100%;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 25px 25px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants .listrestaurants a p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: #008766;
-  background-color: #99E2D0;
-  height: 25px;
-  width: 75%;
-  padding: 5px;
-  border-radius: 5px;
-}
-.restaurants .listrestaurants a .descriptioncard {
+.restaurants .listrestaurants .carddescriptions {
   padding-left: 13px;
+  padding-top: 10px;
+}
+.restaurants .listrestaurants .carddescriptions h3 {
   color: black;
-}
-.restaurants .listrestaurants a .descriptioncard h4 {
-  padding-left: 5px;
-}
-.restaurants .listrestaurants a .descriptioncard p {
+  font-size: 18px;
+  font-weight: 700;
+  background-color: transparent;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin: 0px;
+}
+.restaurants .listrestaurants .carddescriptions p {
+  padding: 0px;
+  margin: 0px;
+  color: black;
   font-size: 17px;
   font-weight: 300;
   background-color: transparent;
-  color: black;
-  justify-content: flex-start;
+  text-align: start;
+  box-shadow: none;
 }
-.restaurants .listrestaurants a i {
+.restaurants .listrestaurants p {
+  color: #008766;
+  background-color: #99E2D0;
+  height: 30px;
+  width: 95%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 0px 2px 0px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.restaurants .listrestaurants i {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-}
-.restaurants .listrestaurants a i:hover {
-  color: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
 
 footer {
@@ -255,7 +270,14 @@ footer {
   footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    align-items: center;
+    gap: 15px;
+  }
+}
+@media (min-width: 700px) {
+  footer .myfooter {
+    display: flex;
+    gap: 15px;
   }
 }
 footer h2 {
@@ -278,10 +300,10 @@ footer a {
   position: relative;
   z-index: 1;
   height: 275px;
-  max-height: 350px;
 }
 .images img {
   width: 110%;
+  max-height: 375px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -291,7 +313,7 @@ footer a {
   flex-direction: column;
   position: relative;
   z-index: 2;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 30px 30px 0px 0px;
   background-color: #f6f6f6;
   padding: 30px 13px 30px 13px;
 }
@@ -305,13 +327,19 @@ footer a {
 .lerestaurant .title {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+  gap: 30px;
 }
 .lerestaurant .title h2 {
   font-family: "Shrikhand", serif;
   font-size: 28px;
   font-weight: 400;
+}
+@media (min-width: 700px) {
+  .lerestaurant .menus {
+    padding: 0px 10%;
+  }
 }
 .lerestaurant h2 {
   color: #000;
@@ -334,9 +362,10 @@ footer a {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  margin-bottom: 30px;
 }
 .lerestaurant .carte .card {
-  width: 90%;
+  width: 95%;
   height: 70px;
   padding: 10px;
   margin: 0px;
@@ -367,4 +396,11 @@ footer a {
 .lerestaurant .carte p {
   font-size: 15px;
   font-weight: 300;
+}
+.lerestaurant .carte span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  font-weight: 700;
+  color: #353535;
 }/*# sourceMappingURL=main.css.map */
