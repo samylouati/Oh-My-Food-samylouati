@@ -1,4 +1,4 @@
-header {
+header {  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,13 @@ header {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 2;
+
+        a {
+            position: absolute;
+            left: 5%;
+            font-size: 30px;
+            color: #353535;
+        }
     
         img {
             height: 35px;

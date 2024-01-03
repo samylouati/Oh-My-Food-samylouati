@@ -9,6 +9,12 @@ header {
   position: relative;
   z-index: 2;
 }
+header a {
+  position: absolute;
+  left: 5%;
+  font-size: 30px;
+  color: #353535;
+}
 header img {
   height: 35px;
 }
@@ -195,7 +201,8 @@ form input input::placeholder {
 }
 @media (min-width: 700px) {
   .restaurants .listrestaurants .cardrestaurants {
-    width: 48%;
+    width: 45%;
+    margin-bottom: 50px;
   }
 }
 .restaurants .listrestaurants a {
@@ -271,7 +278,7 @@ footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 50px;
   }
 }
 @media (min-width: 700px) {
@@ -327,9 +334,14 @@ footer a {
 .lerestaurant .title {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   gap: 30px;
+}
+@media (min-width: 700px) {
+  .lerestaurant .title {
+    justify-content: center;
+  }
 }
 .lerestaurant .title h2 {
   font-family: "Shrikhand", serif;
@@ -379,7 +391,7 @@ footer a {
   grid-row-gap: 0px;
   cursor: pointer;
 }
-.lerestaurant .carte h4 {
+.lerestaurant .carte h3 {
   grid-area: 1/1/2/2;
 }
 .lerestaurant .carte p {
@@ -388,10 +400,15 @@ footer a {
 .lerestaurant .carte span {
   grid-area: 2/2/3/3;
 }
-.lerestaurant .carte h4 {
+.lerestaurant .carte h3 {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  color: black;
+  background-color: transparent;
 }
 .lerestaurant .carte p {
   font-size: 15px;
