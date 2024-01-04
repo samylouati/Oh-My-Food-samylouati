@@ -361,6 +361,9 @@ footer a {
   font-size: 28px;
   font-weight: 400;
 }
+.lerestaurant .title i {
+  font-size: 28px;
+}
 @media (min-width: 700px) {
   .lerestaurant .menus {
     padding: 0px 10%;
@@ -374,13 +377,12 @@ footer a {
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
-  padding-left: 13px;
 }
 .lerestaurant .border {
   height: 3px;
   width: 40px;
   background-color: #99e2d0;
-  margin: 0px 0px 13px 13px;
+  margin-bottom: 13px;
 }
 .lerestaurant .carte {
   display: flex;
@@ -388,24 +390,24 @@ footer a {
   align-items: center;
   gap: 15px;
   margin-bottom: 30px;
+  width: 100%;
 }
 .lerestaurant .carte .card {
-  width: 95%;
+  width: 100%;
   height: 70px;
-  padding: 10px;
   margin: 0px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   background-color: white;
   display: grid;
-  grid-template-columns: 80% 1fr;
-  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   cursor: pointer;
 }
 .lerestaurant .carte h3 {
-  grid-area: 1/1/2/2;
+  grid-area: 1/1/2/3;
 }
 .lerestaurant .carte p {
   grid-area: 2/1/3/2;
@@ -417,6 +419,7 @@ footer a {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
+  padding-left: 10px;
   justify-content: flex-start;
   width: 100%;
   height: auto;
@@ -426,6 +429,7 @@ footer a {
 .lerestaurant .carte p {
   font-size: 15px;
   font-weight: 300;
+  padding-left: 10px;
 }
 .lerestaurant .carte span {
   display: flex;
@@ -433,4 +437,26 @@ footer a {
   font-size: 15px;
   font-weight: 700;
   color: #353535;
+  padding: 15px;
+}
+.lerestaurant .carte i {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  font-size: 25px;
+}
+.lerestaurant .carte .greenbox {
+  height: 100%;
+  width: 70px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  display: none;
+  transition: transform 2s;
+}
+.lerestaurant .card:hover .greenbox {
+  display: block;
+  transform: translate(15px, 0);
 }/*# sourceMappingURL=main.css.map */
