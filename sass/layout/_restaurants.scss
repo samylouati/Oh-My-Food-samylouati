@@ -32,6 +32,7 @@
                 grid-template-rows: 75% 25%;
                 grid-column-gap: 0px;
                 grid-row-gap: 0px;
+                transition: transform 0.5s;
                 }
                     
                     a { grid-area: 1 / 1 / 3 / 3; }
@@ -97,5 +98,8 @@
                     align-items: center;
                 }
         
+                .cardrestaurants:hover {
+                    transform: scale(1.05);
+                }
     }
 }

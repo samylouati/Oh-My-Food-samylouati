@@ -47,10 +47,12 @@ button {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.5s;
 }
 
 button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(1.2);
 }
 
 .button {
@@ -66,10 +68,12 @@ button:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   cursor: pointer;
+  transition: transform 0.5s;
 }
 
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(1.2);
 }
 
 h3 {
@@ -101,6 +105,11 @@ form input {
   background: var(--Grey-2, #EAEAEA);
   font-size: 16px;
   font-weight: 500;
+}
+form input:focus {
+  border: 2px solid black;
+  height: 100%;
+  border-radius: 15px;
 }
 form input input::-moz-placeholder {
   color: black;
@@ -198,6 +207,7 @@ form input input::placeholder {
   grid-template-rows: 75% 25%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  transition: transform 0.5s;
 }
 @media (min-width: 700px) {
   .restaurants .listrestaurants .cardrestaurants {
@@ -264,6 +274,9 @@ form input input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.restaurants .listrestaurants .cardrestaurants:hover {
+  transform: scale(1.05);
 }
 
 footer {
