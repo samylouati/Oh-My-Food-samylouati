@@ -211,7 +211,7 @@ form input input::placeholder {
 }
 @media (min-width: 700px) {
   .restaurants .listrestaurants .cardrestaurants {
-    width: 45%;
+    width: 42%;
     margin-bottom: 50px;
   }
 }
@@ -399,27 +399,27 @@ footer a {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   background-color: white;
+  cursor: pointer;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 150px;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  cursor: pointer;
 }
 .lerestaurant .carte h3 {
-  grid-area: 1/1/2/3;
+  grid-area: 1/1/2/2;
 }
 .lerestaurant .carte p {
   grid-area: 2/1/3/2;
 }
-.lerestaurant .carte span {
-  grid-area: 2/2/3/3;
+.lerestaurant .carte .moving {
+  grid-area: 1/2/3/3;
 }
 .lerestaurant .carte h3 {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
-  padding-left: 10px;
+  padding: 10px;
   justify-content: flex-start;
   width: 100%;
   height: auto;
@@ -430,16 +430,29 @@ footer a {
   font-size: 15px;
   font-weight: 300;
   padding-left: 10px;
+  margin: 0px;
 }
-.lerestaurant .carte span {
+.lerestaurant .carte .moving {
   display: flex;
   justify-content: flex-end;
+  transition: transform 1s ease-in-out;
+}
+.lerestaurant .carte .moving span {
+  display: flex;
   font-size: 15px;
   font-weight: 700;
   color: #353535;
-  padding: 15px;
+  padding: 40px 15px;
+  transform: translate(1);
 }
-.lerestaurant .carte i {
+.lerestaurant .carte .moving .greenbox {
+  height: 100%;
+  width: 70px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transform: scale(0);
+}
+.lerestaurant .carte .moving .greenbox i {
   height: 100%;
   color: white;
   display: flex;
@@ -448,15 +461,9 @@ footer a {
   align-items: center;
   font-size: 25px;
 }
-.lerestaurant .carte .greenbox {
-  height: 100%;
-  width: 70px;
-  background-color: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  display: none;
-  transition: transform 2s;
+.lerestaurant .card:hover .moving {
+  transform: translateX(-70px);
 }
-.lerestaurant .card:hover .greenbox {
-  display: block;
-  transform: translate(15px, 0);
+.lerestaurant .card:hover .moving .greenbox {
+  transform: scale(1);
 }/*# sourceMappingURL=main.css.map */
