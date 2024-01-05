@@ -90,6 +90,7 @@
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
+            overflow: hidden;
             }
                 
                 h3 { grid-area: 1 / 1 / 2 / 2; }
@@ -118,6 +119,8 @@
                 .moving {
                     display: flex;
                     justify-content: flex-end;
+                    transform: translateX(70px);
+                    transition: transform 1s;
 
                     span {
                         display: flex;
@@ -132,8 +135,7 @@
                         width: 70px;
                         background-color: #99E2D0;
                         border-radius: 0px 15px 15px 0px;
-                        display: none;
-                    
+
                         i {
                             height: 100%;
                             color: white;
@@ -150,11 +152,8 @@
         }
 
         .card:hover {
-
             .moving {
-                .greenbox {
-                    display: block;
-                }
+                transform: translateX(0px);
             }
         }
     }
