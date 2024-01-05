@@ -118,7 +118,6 @@
                 .moving {
                     display: flex;
                     justify-content: flex-end;
-                    transition: transform 1s ease-in-out;
 
                     span {
                         display: flex;
@@ -126,7 +125,6 @@
                         font-weight: 700;
                         color: #353535;
                         padding: 40px 15px;
-                        transform: translate(1);
                     }
 
                     .greenbox {
@@ -134,7 +132,7 @@
                         width: 70px;
                         background-color: #99E2D0;
                         border-radius: 0px 15px 15px 0px;
-                        transform: scale(0);
+                        display: none;
                     
                         i {
                             height: 100%;
@@ -154,9 +152,8 @@
         .card:hover {
 
             .moving {
-                transform: translateX(-70px);
                 .greenbox {
-                    transform: scale(1);
+                    display: block;
                 }
             }
         }

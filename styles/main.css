@@ -435,7 +435,6 @@ footer a {
 .lerestaurant .carte .moving {
   display: flex;
   justify-content: flex-end;
-  transition: transform 1s ease-in-out;
 }
 .lerestaurant .carte .moving span {
   display: flex;
@@ -443,14 +442,13 @@ footer a {
   font-weight: 700;
   color: #353535;
   padding: 40px 15px;
-  transform: translate(1);
 }
 .lerestaurant .carte .moving .greenbox {
   height: 100%;
   width: 70px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
-  transform: scale(0);
+  display: none;
 }
 .lerestaurant .carte .moving .greenbox i {
   height: 100%;
@@ -461,9 +459,6 @@ footer a {
   align-items: center;
   font-size: 25px;
 }
-.lerestaurant .card:hover .moving {
-  transform: translateX(-70px);
-}
 .lerestaurant .card:hover .moving .greenbox {
-  transform: scale(1);
+  display: block;
 }/*# sourceMappingURL=main.css.map */
