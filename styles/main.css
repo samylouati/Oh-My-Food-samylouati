@@ -221,7 +221,7 @@ form input input::placeholder {
 .restaurants .listrestaurants p {
   grid-area: 1/2/2/3;
 }
-.restaurants .listrestaurants i {
+.restaurants .listrestaurants .heart {
   grid-area: 2/2/3/3;
 }
 .restaurants .listrestaurants a {
@@ -259,6 +259,8 @@ form input input::placeholder {
   background-color: transparent;
   text-align: start;
   box-shadow: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurants .listrestaurants p {
   color: #008766;
@@ -269,6 +271,8 @@ form input input::placeholder {
   border-radius: 5px;
   padding: 8px 0px 2px 0px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurants .listrestaurants i {
   display: flex;
@@ -346,23 +350,20 @@ footer a {
 }
 .lerestaurant .title {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  gap: 30px;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 @media (min-width: 700px) {
   .lerestaurant .title {
     justify-content: center;
+    padding: 0%;
   }
 }
 .lerestaurant .title h2 {
   font-family: "Shrikhand", serif;
   font-size: 28px;
   font-weight: 400;
-}
-.lerestaurant .title i {
-  font-size: 28px;
+  text-transform: none;
 }
 @media (min-width: 700px) {
   .lerestaurant .menus {
@@ -419,19 +420,21 @@ footer a {
 .lerestaurant .carte h3 {
   margin: 0px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
   padding: 10px;
   justify-content: flex-start;
   width: 100%;
   height: auto;
   color: black;
   background-color: transparent;
+  text-overflow: ellipsis;
 }
 .lerestaurant .carte p {
   font-size: 15px;
   font-weight: 300;
   padding-left: 10px;
   margin: 0px;
+  text-overflow: ellipsis;
 }
 .lerestaurant .carte .moving {
   display: flex;
@@ -483,4 +486,50 @@ footer a {
   align-items: center;
   border: 5px solid;
   border-radius: 50%;
+}
+
+.coeurplein {
+  z-index: 1;
+  opacity: 0;
+  transition: 400ms;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coeurvide {
+  z-index: 2;
+  opacity: 1;
+  transition: 400ms;
+}
+
+#heartcheck {
+  opacity: 0;
+  z-index: 4;
+}
+#heartcheck:checked ~ .coeurplein {
+  opacity: 1;
+}
+#heartcheck:checked ~ .coeurvide {
+  opacity: 0;
+}
+
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+}
+.heart input {
+  font-size: 28px;
+  position: absolute;
+}
+.heart .coeurvide {
+  font-size: 28px;
+  position: absolute;
+}
+.heart .coeurplein {
+  font-size: 28px;
+  position: absolute;
 }/*# sourceMappingURL=main.css.map */

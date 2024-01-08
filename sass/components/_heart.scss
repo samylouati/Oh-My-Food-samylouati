@@ -1,0 +1,47 @@
+.coeurplein {
+    z-index: 1;
+    opacity: 0;
+    transition: 400ms;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.coeurvide {
+    z-index: 2;
+    opacity: 1;
+    transition: 400ms;
+}
+
+#heartcheck {
+    opacity: 0;
+    z-index: 4;
+    &:checked ~ .coeurplein{
+        opacity: 1;
+    }
+    &:checked~.coeurvide {
+        opacity: 0;
+    }
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+
+    input {
+        font-size: 28px;
+        position: absolute;
+    }
+
+    .coeurvide {
+        font-size: 28px;
+        position: absolute;
+    }
+
+    .coeurplein {
+        font-size: 28px;
+        position: absolute;
+    }
+}
