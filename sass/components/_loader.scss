@@ -6,20 +6,7 @@
     justify-content: center;
     position: absolute;
     opacity: 1;
-    z-index: 3;
-
-    .loader::before {
-        content: "";
-        background-color: white;
-        opacity: 1;
-    }
-
-    .loader::after {
-        content:"";
-        background-color: transparent;
-        animation: forwards 3s;
-        opacity: 0;
-    }    
+    z-index: 3; 
 
     .spinner {
         display: flex;
@@ -36,7 +23,7 @@
         position: absolute;
         width: 50px;
         height: 50px;
-        animation: spinner-w7nm60 3s;
+        animation: spinner-w7nm60 3s infinite linear;
         background: #9356dc;
         border-radius: 50%;
         opacity: 0;
