@@ -41,6 +41,9 @@
             font-size: 28px;
             font-weight: 400;
             text-transform: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
         }
 
     }
@@ -60,6 +63,9 @@
         font-weight: 300;
         line-height: normal;
         text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
         animation: menusX 2s;
     }
 
@@ -94,8 +100,13 @@
             grid-row-gap: 0px;
             overflow: hidden;
             animation: menusY 2s;
+
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    animation-delay: 0.5*$i;
+                }
             }
-                
+    
                 h3 { grid-area: 1 / 1 / 2 / 2; }
                 p { grid-area: 2 / 1 / 3 / 2; }
                 .moving { grid-area: 1 / 2 / 3 / 3; }
@@ -111,6 +122,8 @@
                 color: black;
                 background-color: transparent;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                text-wrap: nowrap;
                 }
 
                 p {
@@ -119,6 +132,8 @@
                     padding-left: 10px;
                     margin: 0px;
                     text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-wrap: nowrap;
                 }
 
                 .moving {
@@ -163,3 +178,4 @@
         }
     
     }
+}
