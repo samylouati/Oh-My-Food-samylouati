@@ -45,7 +45,6 @@
             text-overflow: ellipsis;
             text-wrap: nowrap;
         }
-
     }
 
     .menus{
@@ -100,6 +99,7 @@
             grid-row-gap: 0px;
             overflow: hidden;
             animation: menusY 2s;
+            
 
             @for $i from 1 through 4 {
                 &--#{$i} {
