@@ -2,6 +2,7 @@
     position: relative;
     z-index: 1;
     height: 275px;
+    animation: images 2s;
     
     img {
     width: 110%;
@@ -33,6 +34,7 @@
             display: flex;
             justify-content: space-between;
             padding-right: 10%;
+            animation: menus 1.5s;
 
         h2 {
             font-family: 'Shrikhand', serif;
@@ -47,6 +49,7 @@
         @media (min-width: 700px) {
             padding: 0px 10%;
             }
+        animation: menus 2s;
     }
 
     h2 {
@@ -57,6 +60,7 @@
         font-weight: 300;
         line-height: normal;
         text-transform: uppercase;
+        animation: menusX 2s;
     }
 
     .border {
@@ -64,6 +68,7 @@
         width: 40px;
         background-color: #99e2d0;
         margin-bottom: 13px;
+        animation: menusX2 3s;
     }
 
     .carte {
@@ -88,6 +93,7 @@
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             overflow: hidden;
+            animation: menusY 2s;
             }
                 
                 h3 { grid-area: 1 / 1 / 2 / 2; }

@@ -13,6 +13,7 @@ button {
     border: none;
     cursor: pointer;
     transition: transform 0.5s;
+    animation: heart 1s;
 }
 
 button:hover{

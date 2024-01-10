@@ -48,6 +48,7 @@ button {
   border: none;
   cursor: pointer;
   transition: transform 0.5s;
+  animation: heart 1s;
 }
 
 button:hover {
@@ -329,6 +330,7 @@ footer a {
   position: relative;
   z-index: 1;
   height: 275px;
+  animation: images 2s;
 }
 .images img {
   width: 110%;
@@ -358,6 +360,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   padding-right: 10%;
+  animation: menus 1.5s;
 }
 @media (min-width: 700px) {
   .lerestaurant .title {
@@ -370,6 +373,9 @@ footer a {
   font-size: 28px;
   font-weight: 400;
   text-transform: none;
+}
+.lerestaurant .menus {
+  animation: menus 2s;
 }
 @media (min-width: 700px) {
   .lerestaurant .menus {
@@ -384,12 +390,14 @@ footer a {
   font-weight: 300;
   line-height: normal;
   text-transform: uppercase;
+  animation: menusX 2s;
 }
 .lerestaurant .border {
   height: 3px;
   width: 40px;
   background-color: #99e2d0;
   margin-bottom: 13px;
+  animation: menusX2 3s;
 }
 .lerestaurant .carte {
   display: flex;
@@ -413,6 +421,7 @@ footer a {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   overflow: hidden;
+  animation: menusY 2s;
 }
 .lerestaurant .carte h3 {
   grid-area: 1/1/2/2;
@@ -488,6 +497,7 @@ footer a {
   z-index: 2;
   opacity: 1;
   transition: 400ms;
+  animation: heart 1s;
 }
 
 #heartcheck {
@@ -579,5 +589,53 @@ footer a {
   100% {
     opacity: 0;
     z-index: 0;
+  }
+}
+
+@keyframes images {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menusY {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes menusX {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes menusX2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=main.css.map */
