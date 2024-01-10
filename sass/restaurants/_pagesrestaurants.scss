@@ -98,8 +98,7 @@
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             overflow: hidden;
-            animation: menusY 2s;
-            
+            animation: menusY 2s;            
 
             @for $i from 1 through 4 {
                 &--#{$i} {
