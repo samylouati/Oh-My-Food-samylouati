@@ -2,12 +2,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  padding: 14px;
-  gap: 40px;
+  height: 63px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
+}
+@media (min-width: 700px) {
+  header {
+    height: 75px;
+  }
 }
 header a {
   position: absolute;
@@ -34,7 +37,7 @@ body p {
 }
 
 button {
-  margin: 15px;
+  margin: 40px;
   padding: 15px;
   width: 60%;
   max-width: 200px;
@@ -44,7 +47,6 @@ button {
   font-weight: 500;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none;
   border: none;
   cursor: pointer;
   transition: transform 0.5s;
@@ -79,34 +81,47 @@ button:hover {
   transform: scale(1.2);
 }
 
-form {
+.location {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+}
+.location form {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 15px;
-  height: 50px;
-  background: var(--Grey-2, #EAEAEA);
+  gap: 17px;
+  height: 100%;
+  width: 100%;
 }
-form input {
+.location form input {
   border: none;
   background: var(--Grey-2, #EAEAEA);
   font-size: 16px;
   font-weight: 500;
 }
-form input:focus {
+.location form input:focus {
   height: 100%;
   border-radius: 15px;
 }
-form input input::-moz-placeholder {
+.location form input input::-moz-placeholder {
   color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
-form input input::placeholder {
+.location form input input::placeholder {
   color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .reservation {
-  padding: 50px 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -123,7 +138,7 @@ form input input::placeholder {
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media (min-width: 700px) {
   .fonctionnement {
@@ -144,7 +159,6 @@ form input input::placeholder {
   justify-content: flex-start;
   text-align: center;
   gap: 15px;
-  width: 90%;
   height: 72px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -185,16 +199,19 @@ form input input::placeholder {
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 54px 20px;
   background-color: #EAEAEA;
 }
 @media (min-width: 700px) {
   .restaurants {
-    padding: 20px 10%;
+    padding: 30px 10%;
     width: auto;
     display: flex;
     justify-content: space-between;
   }
+}
+.restaurants .listrestaurants {
+  padding-top: 20px;
 }
 @media (min-width: 700px) {
   .restaurants .listrestaurants {
@@ -294,20 +311,29 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 25px 22px;
+  height: 142px;
 }
 @media (min-width: 700px) {
   footer {
+    height: 114px;
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
     gap: 50px;
+    padding: 30px 25px;
   }
+}
+footer .myfooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 7px;
 }
 @media (min-width: 700px) {
   footer .myfooter {
-    display: flex;
-    gap: 15px;
+    flex-direction: row;
+    width: 60%;
   }
 }
 footer h2 {
@@ -333,7 +359,7 @@ footer a {
   animation: images 2s;
 }
 .images img {
-  width: 110%;
+  width: 100%;
   max-height: 375px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -346,7 +372,7 @@ footer a {
   z-index: 2;
   border-radius: 30px 30px 0px 0px;
   background-color: #f6f6f6;
-  padding: 30px 13px 30px 13px;
+  padding: 0px 13px 30px 13px;
 }
 @media (min-width: 700px) {
   .lerestaurant {
@@ -359,7 +385,7 @@ footer a {
 .lerestaurant .title {
   display: flex;
   justify-content: space-between;
-  padding-right: 10%;
+  padding: 0px 10% 30px 0px;
   animation: menus 1.5s;
 }
 @media (min-width: 700px) {
@@ -376,6 +402,7 @@ footer a {
   overflow: hidden;
   text-overflow: ellipsis;
   text-wrap: nowrap;
+  padding-top: 40px;
 }
 .lerestaurant .menus {
   animation: menus 2s;
@@ -410,7 +437,6 @@ footer a {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  margin-bottom: 30px;
   width: 100%;
 }
 .lerestaurant .carte .card {

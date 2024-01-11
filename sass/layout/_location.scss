@@ -1,24 +1,35 @@
-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 15px;
+.location {
     height: 50px;
-    background: var(--Grey-2, #EAEAEA);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
 
-    input {
-        border: none;
-        background: var(--Grey-2, #EAEAEA);
-        font-size: 16px;
-        font-weight: 500;
-        &:focus{
-            height: 100%;
-            border-radius: 15px;
-        }
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 17px;
+        height: 100%;
+        width: 100%;
 
-        input::placeholder { 
-            color: black;          
+        input {
+            border: none;
+            background: var(--Grey-2, #EAEAEA);
+            font-size: 16px;
+            font-weight: 500;
+            &:focus{
+                height: 100%;
+                border-radius: 15px;
+            }
+
+            input::placeholder { 
+                color: black;  
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+            } 
         } 
-    } 
+    }
 }
