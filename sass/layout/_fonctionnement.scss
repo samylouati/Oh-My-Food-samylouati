@@ -1,3 +1,8 @@
+$shadow1: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+$main-color:#9356dc;
+$grey2: #7e7e7e;
+$white2: #f6f6f6;
+
 .fonctionnement { 
     @media (min-width: 700px) {
         padding: 50px 10%;
@@ -27,15 +32,15 @@
         gap: 15px;
         height: 72px;
         border-radius: 20px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        background-color: #f6f6f6;
+        box-shadow: $shadow1;
+        background-color: $white2;
         cursor: pointer;
 
         h3 {
             font-weight: 500;
             border-radius: 15px;
             color: white;
-            background-color: #9356DC;
+            background-color: $main-color;
             height: 24px;
             width: 24px;
             text-align: center;
@@ -47,7 +52,7 @@
         }
 
         i {
-            color: #7e7e7e;
+            color: $grey2;
         }
 
         p {
@@ -59,7 +64,7 @@
     
     .rules:hover {
         i{
-            color: #9356dc;
+            color: $main-color;
         }
     }
 }

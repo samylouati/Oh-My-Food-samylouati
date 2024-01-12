@@ -1,13 +1,16 @@
+$grey: #353535;
+$white2: #f6f6f6;
+
 .reservation {
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: $white2;
 
     .reservation p {
-        color: var(--Grey, #353535);
+        color: $grey;
         font-size: 18px;
         font-weight: 300;
     }

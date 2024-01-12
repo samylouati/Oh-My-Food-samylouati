@@ -1,3 +1,6 @@
+$grey: #353535;
+$header-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
 header {  
     @media (min-width: 700px) {
         height: 75px;
@@ -6,7 +9,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 63px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $header-shadow;
     position: relative;
     z-index: 2;
 
@@ -14,7 +17,7 @@ header {
             position: absolute;
             left: 5%;
             font-size: 30px;
-            color: #353535;
+            color: $grey;
         }
     
         img {

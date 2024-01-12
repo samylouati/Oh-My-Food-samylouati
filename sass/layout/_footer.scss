@@ -1,3 +1,5 @@
+$grey: #353535;
+
 footer {
     @media (min-width: 700px) {
         height: 114px;
@@ -7,7 +9,7 @@ footer {
         gap: 50px;
         padding: 30px 25px;
         }
-    background: var(--Grey, #353535);
+    background: $grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,8 +45,7 @@ footer {
         font-size: 16px;
         font-weight: 500;
         text-decoration: none;
-    }
-        
+    }  
 }
 
         
