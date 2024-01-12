@@ -2,6 +2,9 @@ $grey: #353535;
 $white2: #f6f6f6;
 
 .reservation {
+    @media (min-width: 700px) {
+        padding: 30px 0px;
+        }
     padding: 30px 20px;
     display: flex;
     flex-direction: column;

@@ -26,7 +26,10 @@ button:hover{
 }
 
 .button {
-    margin: 15px;
+    @media (min-width: 700px) {
+        margin: 27px 50% 0px;
+        }
+    margin: 27px 50% 50px;
     padding: 15px;
     width: 60%;
     max-width: 200px;
@@ -37,6 +40,8 @@ button:hover{
     background: $button-color;
     box-shadow: $shadow1;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
     cursor: pointer;
     transition: transform 0.5s;
 }
