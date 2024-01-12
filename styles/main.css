@@ -25,6 +25,7 @@ header img {
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
+  width: 100%;
 }
 body h2 {
   font-size: 24px;
@@ -353,6 +354,7 @@ footer a {
 }
 
 .images {
+  height: 115%;
   position: relative;
   z-index: 1;
   height: 275px;
@@ -360,7 +362,6 @@ footer a {
 }
 .images img {
   width: 100%;
-  max-height: 375px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -453,7 +454,6 @@ footer a {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   overflow: hidden;
-  animation: menusY 2s;
 }
 .lerestaurant .carte .card--1 {
   animation-delay: 0.5;
@@ -594,7 +594,6 @@ footer a {
   position: absolute;
   top: 20%;
   left: 50%;
-  width: 100%;
 }
 .loader .spinner::before,
 .loader .spinner::after {
@@ -687,18 +686,14 @@ footer a {
     transform: scale(1);
   }
 }
-.card--1 {
-  animation-delay: 500ms;
+#entree {
+  animation: menusY 1s;
 }
 
-.card--2 {
-  animation-delay: 1000ms;
+#plat {
+  animation: menusY 2s;
 }
 
-.card--3 {
-  animation-delay: 1500ms;
-}
-
-.card--4 {
-  animation-delay: 2000ms;
+#dessert {
+  animation: menusY 3s;
 }/*# sourceMappingURL=main.css.map */

@@ -51,15 +51,14 @@
     }
 }
 
-.card--1 {
-    animation-delay: 500ms;
+#entree {
+    animation: menusY 1s;
 }
-.card--2 {
-    animation-delay: 1000ms;
+
+#plat {
+    animation: menusY 2s;
 }
-.card--3 {
-    animation-delay: 1500ms;
+
+#dessert {
+    animation: menusY 3s;
 }
-.card--4 {
-    animation-delay: 2000ms;
-} 
