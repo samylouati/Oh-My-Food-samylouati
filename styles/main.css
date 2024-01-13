@@ -1,8 +1,8 @@
 header {
+  height: 63px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 63px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
@@ -17,6 +17,9 @@ header a {
   left: 5%;
   font-size: 30px;
   color: #353535;
+}
+header h1 {
+  margin: 14px;
 }
 header img {
   height: 35px;
@@ -47,7 +50,7 @@ button {
   font-size: 16px;
   font-weight: 500;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
   transition: transform 0.5s;
@@ -56,13 +59,13 @@ button {
 
 button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.15);
   transform: scale(1.2);
 }
 
 .button {
   margin: 27px 50% 50px;
-  padding: 15px;
+  padding: 15px 18px 13px;
   width: 60%;
   max-width: 200px;
   border-radius: 25px;
@@ -70,22 +73,18 @@ button:hover {
   font-size: 16px;
   font-weight: 500;
   background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
   transition: transform 0.5s;
-}
-@media (min-width: 700px) {
-  .button {
-    margin: 27px 50% 0px;
-  }
+  height: 24px;
 }
 
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.15);
   transform: scale(1.2);
 }
 
@@ -347,7 +346,7 @@ footer .myfooter {
 @media (min-width: 700px) {
   footer .myfooter {
     flex-direction: row;
-    width: 60%;
+    width: 55%;
   }
 }
 footer h2 {
@@ -388,26 +387,23 @@ footer a {
   z-index: 2;
   border-radius: 30px 30px 0px 0px;
   background-color: #f6f6f6;
-  padding: 0px 13px 30px 13px;
+  padding: 0px 13px 30px;
 }
 @media (min-width: 700px) {
   .lerestaurant {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 30px;
+    margin: 30px 10% 0px;
   }
 }
 .lerestaurant .title {
   display: flex;
-  justify-content: space-between;
-  padding: 0px 10% 30px 0px;
+  justify-content: flex-start;
+  padding: 30px 10% 0px 0px;
   animation: menus 1.5s;
 }
 @media (min-width: 700px) {
   .lerestaurant .title {
     justify-content: center;
-    padding: 0%;
+    padding: 50px 10% 0px;
   }
 }
 .lerestaurant .title h2 {
@@ -418,14 +414,14 @@ footer a {
   overflow: hidden;
   text-overflow: ellipsis;
   text-wrap: nowrap;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 .lerestaurant .menus {
   animation: menus 2s;
 }
 @media (min-width: 700px) {
   .lerestaurant .menus {
-    padding: 0px 10%;
+    margin: 0px 10%;
   }
 }
 .lerestaurant h2 {
@@ -440,6 +436,7 @@ footer a {
   text-overflow: ellipsis;
   text-wrap: nowrap;
   animation: menusX 2s;
+  padding-top: 40px;
 }
 .lerestaurant .border {
   height: 3px;
@@ -457,7 +454,7 @@ footer a {
 }
 .lerestaurant .carte .card {
   width: 100%;
-  height: 70px;
+  height: 72px;
   margin: 0px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -469,18 +466,6 @@ footer a {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   overflow: hidden;
-}
-.lerestaurant .carte .card--1 {
-  animation-delay: 0.5;
-}
-.lerestaurant .carte .card--2 {
-  animation-delay: 1;
-}
-.lerestaurant .carte .card--3 {
-  animation-delay: 1.5;
-}
-.lerestaurant .carte .card--4 {
-  animation-delay: 2;
 }
 .lerestaurant .carte .card h3 {
   grid-area: 1/1/2/2;
@@ -579,7 +564,12 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10%;
+  padding-left: 25%;
+}
+@media (min-width: 700px) {
+  .heart {
+    padding-left: 5%;
+  }
 }
 .heart input {
   font-size: 28px;

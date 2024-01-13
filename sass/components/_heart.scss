@@ -29,10 +29,13 @@ $button-color: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #
 }
 
 .heart {
+    @media (min-width: 700px) {
+        padding-left: 5%;
+        }
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10%;
+    padding-left: 25%;
 
     input {
         font-size: 28px;

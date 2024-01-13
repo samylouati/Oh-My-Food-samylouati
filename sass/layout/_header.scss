@@ -5,22 +5,26 @@ header {
     @media (min-width: 700px) {
         height: 75px;
         }
+    height: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 63px;
     box-shadow: $header-shadow;
     position: relative;
     z-index: 2;
 
-        a {
-            position: absolute;
-            left: 5%;
-            font-size: 30px;
-            color: $grey;
-        }
+    a {
+        position: absolute;
+        left: 5%;
+        font-size: 30px;
+        color: $grey;
+    }
+
+    h1 {
+        margin: 14px;
+    }
     
-        img {
-            height: 35px;
-            }
+    img {
+        height: 35px;
+    }
 }

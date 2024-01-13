@@ -1,6 +1,6 @@
 $button-color: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 $button-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-$shadow1: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+$shadow1: 0px 4px 15px 10px rgba(0, 0, 0, 0.15);
 
 button {
     margin: 40px;
@@ -26,11 +26,8 @@ button:hover{
 }
 
 .button {
-    @media (min-width: 700px) {
-        margin: 27px 50% 0px;
-        }
     margin: 27px 50% 50px;
-    padding: 15px;
+    padding: 15px 18px 13px;
     width: 60%;
     max-width: 200px;
     border-radius: 25px ;
@@ -44,6 +41,7 @@ button:hover{
     text-overflow: ellipsis;
     cursor: pointer;
     transition: transform 0.5s;
+    height: 24px;
 }
 
 .button:hover{

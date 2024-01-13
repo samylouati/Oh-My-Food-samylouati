@@ -50,20 +50,20 @@ $second-color:#99e2d0;
     }
 }
 
-@keyframes loader {
-    0% {
-        opacity: 1;
-        z-index: 3;
-    }
+    @keyframes loader {
+        0% {
+            opacity: 1;
+            z-index: 3;
+        }
 
-    50% {
-        opacity: 1;
-        z-index: 3;
-    }
+        50% {
+            opacity: 1;
+            z-index: 3;
+        }
 
-    100% {
-        opacity: 0;
-        z-index: 0;
+        100% {
+            opacity: 0;
+            z-index: 0;
+        }
     }
-}
 }
